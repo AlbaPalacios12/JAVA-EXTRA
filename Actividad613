@@ -1,0 +1,31 @@
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escriba una sentencia: ");
+        String sentencia = sc.nextLine();
+        sentencia = sentencia.toLowerCase();
+        String parametro1 = "/*";
+        String parametro2 = "*/";
+        int pos1 = 0;
+        int pos2 = 0;
+        boolean dentro = false;
+        
+        for (int i = 0; i < sentencia.length(); i++) {
+            pos1 = sentencia.indexOf(parametro1);
+            pos2 = sentencia.indexOf(parametro2);
+            dentro = true;
+           
+        }
+        System.out.println(pos1);
+        System.out.println(pos2);
+
+        if (dentro = true) {
+            boolean startsWith ()
+            //pos1= sentencia.indexOf(parametro1, pos1 +1);
+           // pos2= sentencia.indexOf(parametro2, pos2 +1);
+            //sentencia = sentencia.substring(pos2 - pos1);
+            System.out.println(sentencia);
+        
+           // System.out.println("No se ha encontrado ningun comentario");
+        }
+    }
+}
