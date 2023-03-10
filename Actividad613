@@ -8,24 +8,27 @@
         int pos1 = 0;
         int pos2 = 0;
         boolean dentro = false;
-        
-        for (int i = 0; i < sentencia.length(); i++) {
-            pos1 = sentencia.indexOf(parametro1);
-            pos2 = sentencia.indexOf(parametro2);
-            dentro = true;
-           
-        }
-        System.out.println(pos1);
-        System.out.println(pos2);
+        while (sentencia.indexOf(parametro1) != -1) {
 
-        if (dentro = true) {
-            boolean startsWith ()
+            for (int i = 0; i < sentencia.length(); i++) {
+                pos1 = sentencia.indexOf(parametro1);
+                pos2 = sentencia.indexOf(parametro2);
+                dentro = true;
+
+            }
+           // System.out.println(pos1);
+          //  System.out.println(pos2);
+
+            // if (dentro = true) {
+            //   boolean startsWith ()
             //pos1= sentencia.indexOf(parametro1, pos1 +1);
-           // pos2= sentencia.indexOf(parametro2, pos2 +1);
-            //sentencia = sentencia.substring(pos2 - pos1);
-            System.out.println(sentencia);
-        
-           // System.out.println("No se ha encontrado ningun comentario");
+            // pos2= sentencia.indexOf(parametro2, pos2 +1);
+            String frase1 = sentencia.substring(0, pos1);
+            String frase2 = sentencia.substring(pos2 + 3, sentencia.length());
+            sentencia = frase1 + frase2;
+            
+            // System.out.println("No se ha encontrado ningun comentario");
         }
+        System.out.println(sentencia);
     }
 }
